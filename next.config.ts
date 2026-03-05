@@ -1,8 +1,10 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
-  output: 'export',
-  basePath: process.env.CI ? '/sketch-threejs' : '',
+  ...(process.env.GITHUB_ACTIONS && {
+    output: 'export' as const,
+    basePath: '/sketch-threejs',
+  }),
   trailingSlash: true,
   turbopack: {
     rules: {
