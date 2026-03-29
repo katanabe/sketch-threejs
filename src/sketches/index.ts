@@ -11,6 +11,7 @@ export type Sketch = {
 }
 
 export const sketches: Sketch[] = [
+  { slug: 'folding-mesh', title: 'Folding Mesh', date: '2026-03-23' },
   { slug: 'unit-circle', title: 'Unit Circle', date: '2026-03-05' },
   { slug: 'wireframe-building', title: 'Wireframe Building', date: '2026-03-05' },
   { slug: 'physics-balls', title: 'Physics Balls', date: '2026-03-05' },
